@@ -1,4 +1,14 @@
 SchoolApp::Application.routes.draw do
+  get "static_pages/main"
+  get "static_pages/visit"
+  get "static_pages/mbank"
+  get "static_pages/multrp"
+  get "static_pages/gwork"
+  get "static_pages/school"
+  get "static_pages/mass"
+  get "static_pages/news"
+  get "static_pages/guest"
+  get "static_pages/spsih"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
