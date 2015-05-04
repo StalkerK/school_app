@@ -1,5 +1,5 @@
 SchoolApp::Application.routes.draw do
-  get "static_pages/main"
+  root 'static_pages#main'
   get "static_pages/visit"
   get "static_pages/mbank"
   get "static_pages/multrp"
