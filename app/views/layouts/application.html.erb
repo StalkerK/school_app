@@ -1,26 +1,18 @@
+
 <!DOCTYPE html>
 <html>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
   <head>
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-   <%= render 'layouts/shim' %>
-  </head>
+ <%= render 'layouts/shim' %>
+    </head>
   <body>
-  <% if current_user %>
-  <%= "Hello, #{current_user.email}" %>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% else %>
-  <%= link_to "Sign in", "#sign_in", "data-toggle" => "modal", :class => 'btn btn-small' %>
-  <%= link_to "Sign up", "#sign_up", "data-toggle" => "modal", :class => 'btn btn-small' %>
-  <%= render 'shared/sign_in' %>
-  <%= render 'shared/sign_up' %>
-<% end %>
-  <%= render 'layouts/header' %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>

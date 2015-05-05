@@ -1,4 +1,6 @@
 SchoolApp::Application.routes.draw do
+  get 'static_pages/visit', as: 'user_root'
+  get "persons/profile"
   devise_for :users
   root 'static_pages#main'
   get "static_pages/visit"
