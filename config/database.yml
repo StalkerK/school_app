@@ -8,8 +8,8 @@ development:
   encoding: UTF8
   database: development_db
   pool: 5
-  username: happy_user
-  password: qwerty
+  username: postgres
+  password: postgres
   template: template0
 
 # Warning: The database defined as "test" will be erased and
@@ -20,8 +20,8 @@ test:
   encoding: UTF8
   database: test_db
   pool: 5
-  username: happy_user
-  password: qwerty
+  username: postgres
+  password: postgres
   template: template0
 
 production:
@@ -29,6 +29,6 @@ production:
   encoding: UTF8
   database: production_db
   pool: 5
-  username: happy_user
-  password: qwerty
+  username: postgres
+  password: postgres
   template: template0
