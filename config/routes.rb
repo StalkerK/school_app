@@ -1,7 +1,7 @@
 SchoolApp::Application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations'}
   root 'static_pages#main'
-  get "static_pages/visit"
+  get "static_pages/visit", as: 'user_root'
   get "static_pages/mbank"
   get "static_pages/multrp"
   get "static_pages/gwork"
