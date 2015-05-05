@@ -6,7 +6,10 @@ gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'pg', '0.15.1'
-
+gem 'therubyracer', platforms: :ruby
+gem "less-rails"
+gem 'twitter-bootstrap-rails', branch: 'bootstrap3'
+gem 'devise'
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end

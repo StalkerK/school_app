@@ -1,4 +1,5 @@
 SchoolApp::Application.routes.draw do
+  devise_for :users
   root 'static_pages#main'
   get "static_pages/visit"
   get "static_pages/mbank"
