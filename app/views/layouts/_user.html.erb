@@ -2,7 +2,7 @@
  <ul class="floatleft">
    
 <% if current_user %>
-  <%= "Hello, #{current_user.email}" %>
+  <%= link_to "Hello, #{current_user.email}", edit_user_registration_path %>
    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% else %>
   <%= link_to "Sign in", "#sign_in", "data-toggle" => "modal", :class => 'btn btn-small' %>

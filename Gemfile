@@ -10,6 +10,7 @@ gem 'therubyracer', platforms: :ruby
 gem "less-rails"
 gem 'twitter-bootstrap-rails', branch: 'bootstrap3'
 gem 'devise'
+gem 'paperclip'
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
