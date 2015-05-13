@@ -1,21 +1,8 @@
- <article>
- <ul class="floatleft">
-    <p>
-<% if current_user %>
-  <%= "Hello, #{current_user.email}" %>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% else %>
-  <%= link_to "Sign in", "#sign_in", "data-toggle" => "modal", :class => 'btn btn-small' %>
-  <%= link_to "Sign up", "#sign_up", "data-toggle" => "modal", :class => 'btn btn-small' %>
-  <%= render 'shared/sign_in' %>
-  <%= render 'shared/sign_up' %>
-<% end %>
-    </p>
-    </ul>
-    <p>&nbsp;</p>
-  </article>
-  <header class="navbar navbar-fixed-top navbar-inverse">
-     <article>
+
+ <%= render 'layouts/user' %>
+
+  <header  class="navbar navbar-fixed-top navbar-inverse">
+     
  
       <div class="navbar-inner">
         <div class="container">
