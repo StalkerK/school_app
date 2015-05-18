@@ -1,6 +1,6 @@
 SchoolApp::Application.routes.draw do
   resources :posts
-
+  resources :uploads
   devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations'}
   root 'static_pages#main'
   get "static_pages/visit"

@@ -1,2 +1,4 @@
 <h2><%= link_to_unless_current @post.title, @post %></h2>
+<%= image_tag @post.photo.url(:medium) %>
  <%= simple_format @post.body %>
+
