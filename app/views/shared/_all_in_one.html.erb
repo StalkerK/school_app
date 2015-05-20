@@ -1,0 +1,19 @@
+
+<div class="center hero-unit">
+  <h1>Welcome to the School App</h1>
+
+  <div class="span8">
+    <% if @page.posts.any? %>
+      <h3>Posts (<%= @page.posts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @page.posts %>
+      </ol>
+     <% end %>
+  </div>
+</div>
+   
+  <%= link_to "Реєстрація", '#', class: "btn btn-large btn-primary" %>
+</div>
+<% if signed_in? %>
+<%= render 'posts/form' %>
+<% end %>
