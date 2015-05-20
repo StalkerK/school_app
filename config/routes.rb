@@ -1,4 +1,5 @@
 SchoolApp::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   resources :posts
   resources :uploads
   devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations'}
