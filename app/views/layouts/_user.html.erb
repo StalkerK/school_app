@@ -6,9 +6,9 @@
    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% else %>
   <%= link_to "Sign in", "#sign_in", "data-toggle" => "modal", :class => 'btn btn-small' %>
-  <%= link_to "Sign up", "#sign_up", "data-toggle" => "modal", :class => 'btn btn-small' %>
+  
   <%= render 'shared/sign_in' %>
-  <%= render 'shared/sign_up' %>
+  
 <% end %>
        </ul>
     <p>&nbsp;</p>

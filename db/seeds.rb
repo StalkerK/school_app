@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+    pages = StaticPage.create([{name: 'main'}, {name: 'guest'}, {name: 'gwork'}, {name: 'mass'}, {name: 'mbank'}, {name: 'multrp'}, {name: 'news'}, {name: 'school'}, {name: 'spsih'}, {name: 'visit'}])

@@ -1,9 +1,17 @@
 class StaticPagesController < ApplicationController
+  
   #before_filter :authenticate_user!, except => [:main, :visit]
+
   def main
+    @page = StaticPage.find_by(name: 'main')
+    #@posts = @page.posts.paginate(page: params[:page])
+    @post = @page.posts.build if signed_in?
   end
 
-  def visit
+   def visit
+    @page = StaticPage.find_by(name: 'visit')
+
+    @post = @page.posts.build if signed_in?
   end
 
   def mbank
@@ -29,4 +37,8 @@ class StaticPagesController < ApplicationController
 
   def spsih
   end
+
+ 
+
+ 
 end

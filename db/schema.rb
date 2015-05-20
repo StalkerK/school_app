@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513134145) do
+ActiveRecord::Schema.define(version: 20150518073758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,15 @@ ActiveRecord::Schema.define(version: 20150513134145) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
+    t.integer  "static_page_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "post_path"
+  end
+
+  add_index "posts", ["static_page_id"], name: "index_posts_on_static_page_id", using: :btree
+
+  create_table "static_pages", force: true do |t|
+    t.string "name"
   end
 
   create_table "users", force: true do |t|

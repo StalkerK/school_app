@@ -1,17 +1,25 @@
 SchoolApp::Application.routes.draw do
-  resources :posts
+  
+  resources :static_pages do
+    resources :posts
+  end
 
-  devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations'}
+  devise_for :users, :skip => [:registrations], controllers: {sessions: 'sessions', registrations: 'registrations'}
+  as :user do
+  get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'    
+  put 'users/:id' => 'devise/registrations#update', :as => 'user_registration'            
+end
+
   root 'static_pages#main'
-  get "static_pages/visit"
-  get "static_pages/mbank"
-  get "static_pages/multrp"
-  get "static_pages/gwork"
-  get "static_pages/school"
-  get "static_pages/mass"
-  get "static_pages/news"
-  get "static_pages/guest"
-  get "static_pages/spsih"
+  match 'visit', to: 'static_pages#visit', via: 'get'
+  match 'mbank', to: "static_pages#mbank", via: 'get'
+  match 'multrp', to: "static_pages#multrp", via: 'get'
+  match 'gwork', to: "static_pages#gwork", via: 'get'
+  match 'school', to: "static_pages#school", via: 'get'
+  match 'mass', to: "static_pages#mass", via: 'get'
+  match 'news', to: "static_pages#news", via: 'get'
+  match 'guest', to: "static_pages#guest", via: 'get'
+  match 'spsih', to: "static_pages#spsih", via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
