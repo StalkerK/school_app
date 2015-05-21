@@ -1,7 +1,17 @@
 
-<%= form_for([@page, @page.posts.build]) do |f| %>
- 
+<%= form_for([@page, @page.posts.build], :html => { :multipart => true }) do |f| %>
 
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -11,7 +21,14 @@
     <%= f.text_area :body %>
   
   </div>
+
     <div class="actions">
+
+  <div class="field">
+  <%= f.file_field :photo %>
+  </div>
+  <div class="actions">
+
     <%= f.submit %>
   </div>
 <% end %>

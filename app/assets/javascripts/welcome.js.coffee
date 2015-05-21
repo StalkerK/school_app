@@ -16,4 +16,3 @@ $ ->
       "<div class='alert alert-danger pull-left'>Unknown error</div>"
     $(this).parents('.modal').children('.modal-footer').html(error_messages)
   )
-  

@@ -1,5 +1,7 @@
 SchoolApp::Application.routes.draw do
-  
+
+  root 'static_pages#main'
+
   resources :static_pages do
     resources :posts
   end
@@ -10,7 +12,12 @@ SchoolApp::Application.routes.draw do
   put 'users/:id' => 'devise/registrations#update', :as => 'user_registration'            
 end
 
-  root 'static_pages#main'
+
+  mount Ckeditor::Engine => '/ckeditor'
+  
+  resources :uploads
+
+  
   match 'visit', to: 'static_pages#visit', via: 'get'
   match 'mbank', to: "static_pages#mbank", via: 'get'
   match 'multrp', to: "static_pages#multrp", via: 'get'
