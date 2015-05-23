@@ -5,7 +5,8 @@ class StaticPagesController < ApplicationController
   def main
     @page = StaticPage.find_by(name: 'main')
     #@posts = @page.posts.paginate(page: params[:page])
-    @post = @page.posts.build if signed_in?
+    #@post = @page.posts.build if signed_in?
+
   end
 
    def visit

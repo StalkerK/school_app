@@ -3,12 +3,15 @@
   <h1>Welcome to the School App</h1>
 
   <div class="span8">
-    <% if @page.posts.any? %>
+    <% if @page.posts.count > 0 %>
       <h3>Posts (<%= @page.posts.count %>)</h3>
       <ol class="microposts">
-        <%= render @page.posts %>
+        <%= render :partial => @page.posts %>
       </ol>
-     <% end %>
+   
+     <% else %>
+     На цій сторінці немає повидомлень
+  <% end %>
   </div>
 </div>
    

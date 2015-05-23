@@ -1,6 +1,6 @@
 SchoolApp::Application.routes.draw do
 
-  root 'static_pages#main'
+ 
 
   resources :static_pages do
     resources :posts
@@ -17,6 +17,7 @@ end
   
   resources :uploads
 
+  root 'static_pages#main'
   
   match 'visit', to: 'static_pages#visit', via: 'get'
   match 'mbank', to: "static_pages#mbank", via: 'get'

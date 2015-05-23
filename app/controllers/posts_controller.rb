@@ -21,6 +21,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+   
   end
 
   # POST /posts
@@ -28,7 +29,7 @@ class PostsController < ApplicationController
   def create
     @page = StaticPage.find(params[:static_page_id])
     @post = @page.posts.create(post_params)
-     
+ 
     respond_to do |format|
       if @post.save
         format.html { redirect_to (:back), notice: 'Post was successfully created.' }
@@ -45,7 +46,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to @page, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -59,7 +60,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to (:back) }
       format.json { head :no_content }
     end
   end
@@ -67,7 +68,8 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @page = StaticPage.find(params[:static_page_id])
+      @post = @page.posts.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

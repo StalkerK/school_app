@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Show', static_page_post_path(@page, @post) %> |
+<%= link_to 'Back', static_pages_path(@page) %>
