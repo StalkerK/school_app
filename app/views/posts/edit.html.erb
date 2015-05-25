@@ -1,6 +1,20 @@
 <h1>Editing post</h1>
 
-<%= render 'form' %>
+<%= simple_form_for([@page, @post], :html => { :multipart => true }) do |f| %>
+<% if @page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this post from being saved:</h2>
 
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.input :title, label: 'Відредагуйте назву повідомлення', required: false %>
+  <%= f.input :body, label: 'Відредагуйте ваше повідомлення', required: false %>
+  <%= f.submit %>
 <%= link_to 'Show', static_page_post_path(@page, @post) %> |
-<%= link_to 'Back', static_pages_path(@page) %>
+<%= link_to 'Back', :controller => 'static_pages', :action => @page.name %>
+<% end %>

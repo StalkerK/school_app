@@ -32,7 +32,7 @@ class PostsController < ApplicationController
  
     respond_to do |format|
       if @post.save
-        format.html { redirect_to (:back), notice: 'Post was successfully created.' }
+        format.html { redirect_to :controller => 'static_pages', :action => @page.name }
         format.json { render action: 'show', status: :created, location: @page }
       else
         format.html { render action: 'new' }
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @page, notice: 'Post was successfully updated.' }
+        format.html { redirect_to :controller => 'static_pages', :action => @page.name}
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -60,7 +60,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to (:back) }
+      format.html { redirect_to :controller => 'static_pages', :action => @page.name}
       format.json { head :no_content }
     end
   end
