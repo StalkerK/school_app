@@ -1,6 +1,19 @@
 SchoolApp::Application.routes.draw do
 
-  root 'static_pages#main'
+root 'static_pages#main'
+
+  
+  match 'visit', to: 'static_pages#visit', via: 'get'
+  match 'mbank', to: "static_pages#mbank", via: 'get'
+  match 'multrp', to: "static_pages#multrp", via: 'get'
+  match 'gwork', to: "static_pages#gwork", via: 'get'
+  match 'school', to: "static_pages#school", via: 'get'
+  match 'mass', to: "static_pages#mass", via: 'get'
+  match 'news', to: "static_pages#news", via: 'get'
+  match 'guest', to: "static_pages#guest", via: 'get'
+  match 'spsih', to: "static_pages#spsih", via: 'get'
+  
+ 
 
   resources :static_pages do
   resources :posts
@@ -17,16 +30,7 @@ end
   
   resources :uploads
 
-  
-  match 'visit', to: 'static_pages#visit', via: 'get'
-  match 'mbank', to: "static_pages#mbank", via: 'get'
-  match 'multrp', to: "static_pages#multrp", via: 'get'
-  match 'gwork', to: "static_pages#gwork", via: 'get'
-  match 'school', to: "static_pages#school", via: 'get'
-  match 'mass', to: "static_pages#mass", via: 'get'
-  match 'news', to: "static_pages#news", via: 'get'
-  match 'guest', to: "static_pages#guest", via: 'get'
-  match 'spsih', to: "static_pages#spsih", via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

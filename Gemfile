@@ -15,7 +15,7 @@ gem 'jquery-turbolinks', '~> 2.1.0'
 gem 'jquery-fileupload-rails'
 gem 'ckeditor', git: 'https://github.com/galetahub/ckeditor.git'
 gem 'galleria-rails', git: 'https://github.com/tristanperalta/galleria-rails.git'
-
+gem 'simple_form'
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end

@@ -2,13 +2,17 @@
 <div class="center hero-unit">
   <h1>Welcome to the School App</h1>
 
-  <div>
-    <% if @page.posts.any? %>
+
+  <div class="span8">
+    <% if @page.posts.count > 0 %>
       <h3>Posts (<%= @page.posts.count %>)</h3>
-      <ol>
-        <%= render @page.posts %>
+      <ol class="microposts">
+        <%= render :partial => @page.posts %>
       </ol>
-     <% end %>
+   
+     <% else %>
+     На цій сторінці немає повідомлень
+  <% end %>
   </div>
 </div>
 

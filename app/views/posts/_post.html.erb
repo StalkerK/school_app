@@ -4,3 +4,8 @@
 <%= image_tag post.photo.url(:medium) %>
 <%end%>
  <%= raw post.body %>
+
+ <% if signed_in? %>
+ <%= link_to 'Edit', edit_static_page_post_path(post.static_page, post) %>
+ <%= link_to 'Destroy', [post.static_page, post], method: :delete, data: { confirm: 'Are you sure?' } %>
+ <% end %>
