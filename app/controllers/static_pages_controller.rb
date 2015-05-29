@@ -63,6 +63,7 @@ class StaticPagesController < ApplicationController
     @post = @page.posts.build if signed_in?
   end
 
+
  
 
  

@@ -3,7 +3,7 @@ SchoolApp::Application.routes.draw do
   root 'static_pages#main'
 
   resources :static_pages do
-    resources :posts
+  resources :posts
   end
 
   devise_for :users, :skip => [:registrations], controllers: {sessions: 'sessions', registrations: 'registrations'}

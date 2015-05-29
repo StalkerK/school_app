@@ -16,8 +16,8 @@
     <% @posts.each do |post| %>
     <% if post.post_path == :page_title %>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= raw post.body %></td>
+        <td><%= post.title %>
+        <td><%= raw post.body %>
         <td><%= image_tag post.photo.url (:thumb) %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>

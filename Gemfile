@@ -13,7 +13,8 @@ gem 'devise'
 gem 'paperclip'
 gem 'jquery-turbolinks', '~> 2.1.0'
 gem 'jquery-fileupload-rails'
-gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'ckeditor', git: 'https://github.com/galetahub/ckeditor.git'
+gem 'galleria-rails', git: 'https://github.com/tristanperalta/galleria-rails.git'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
@@ -27,7 +28,7 @@ end
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
-gem 'jquery-rails'
+gem "jquery-rails"
 gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 
