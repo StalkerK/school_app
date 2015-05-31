@@ -15,6 +15,7 @@
   <%= f.input :title, label: 'Відредагуйте назву повідомлення', required: false %>
   <%= f.input :body, label: 'Відредагуйте ваше повідомлення', required: false %>
   <%= f.submit %>
+  
 <%= link_to 'Show', static_page_post_path(@page, @post) %> |
 <%= link_to 'Back', :controller => 'static_pages', :action => @page.name %>
 <% end %>

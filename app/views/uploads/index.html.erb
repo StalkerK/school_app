@@ -5,40 +5,52 @@
   <script src="<%= javascript_path('galleria-1.4.2.min.js') %>" ></script>
 
   <style>
-    #galleria{ width: 900px; height: 500px; background: #000 }
+    .galleria{ width: 940px; height: 562px; background: #000 }
 
   </style>
 
   </head>
-  <tbody>
-  <table>
-    <div id="galleria">
-    <% @uploads.each do |upload| %>
-        <%= image_tag(upload.uploaded_file(:original), class: 'thumb') %>
-        <% end %>
+<table>
 
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+             <div class="galleria">
+      <% @uploads.each do |upload| %>
+          <%= image_tag(upload.uploaded_file(:original), class: 'thumb') %>
+          <% end %>
 
-        <tr>
-        <% @uploads.each do |upload| %>
-        <%= image_tag(upload.uploaded_file(:thumb), class: 'thumb') %>
-        </tr>
-  
-        <%= link_to 'Show', upload %>
-        <%= link_to 'Destroy', upload, method: :delete, data: { confirm: 'Are you sure?' } %>
-        
-      
-  <% end %>
-   
+          <% if signed_in? %>
+          <tr>
+          <% @uploads.each do |upload| %>
+          <%= image_tag(upload.uploaded_file(:thumb), class: 'thumb') %>
+          </tr>
+          <tr>
+          <%= link_to 'Show', upload %>
+          <%= link_to 'Destroy', upload, method: :delete, data: { confirm: 'Are you sure?' } %>
+         </tr>
+      <% end %>
+
+    <% end %>
     
   </tbody>
+</table>
+
   <script>
         Galleria.loadTheme("<%= javascript_path('galleria.classic.min.js') %>");
-        Galleria.run("#galleria");
+        Galleria.run(".galleria", {responsive:true,height:0.5625});
 
 </script>
-</table>
 
 <br>
 
-
+<% if signed_in? %>
 <%= link_to 'New Upload', new_upload_path %>
+<% end %>
