@@ -9,8 +9,8 @@
     <%= csrf_meta_tags %>
     
     <%= render 'layouts/shim' %>
-    </head>
-    <script type="text/javascript">$(document).ready(function() {
+    
+      <script type="text/javascript">$(document).ready(function() {
     if ($('textarea').length > 0) {
         var data = $('textarea');
         $.each(data, function(i) {
@@ -18,6 +18,9 @@
         });
     }
 });</script>
+
+    </head>
+  
   <body>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
