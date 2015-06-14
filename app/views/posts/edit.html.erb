@@ -1,5 +1,4 @@
-<h1>Editing post</h1>
-
+<div class="hero-unit">
 <%= simple_form_for([@page, @post], :html => { :multipart => true }) do |f| %>
 <% if @page.errors.any? %>
     <div id="error_explanation">
@@ -18,3 +17,4 @@
 <%= link_to 'Show', static_page_post_path(@page, @post) %> |
 <%= link_to 'Back', :controller => 'static_pages', :action => @page.name %>
 <% end %>
+</div>

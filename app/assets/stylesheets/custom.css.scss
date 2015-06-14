@@ -7,8 +7,66 @@ html {
 }
 
 body {
-  padding-top: 60px;
+ color: #1647E1;
+ 
+  
 }
+header{
+  position:relative;
+  min-width:1083px;
+  
+  margin-bottom: 1px;
+
+}
+article#userlogin{
+  text-align: center;
+  margin:0;
+
+  .btn{
+    float:right;
+  }
+   .title {
+     
+     float:center;
+     text-align: center;
+     
+
+   }
+  .login {
+    position:absolute;
+    top:2px;
+    right:10px;
+    
+    
+}
+}
+.new_post{
+  text-align: center;
+
+}
+.new_post .cke_reset, #cke_post_body.cke_reset{
+
+  margin:auto;
+}
+
+p.alert, p.notice {
+    padding: 0;
+    margin-bottom: 0;
+    border:0px solid;
+    background:none;
+}
+.navbar{
+margin-bottom: 0px;
+}
+
+
+.navbar-inverse .navbar-inner {
+  background-color: #FCFCC8;
+  background-image: none;
+background-repeat: none;
+border-color: #252525;
+   }
+
 
 section {
   overflow: auto;
@@ -24,6 +82,13 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
+}
+.hero-unit{
+ 
+ padding-top:10px;
+}
+.microposts hr{
+   border-color: gray;
 }
 /* typography */
 
