@@ -12,7 +12,8 @@
   <% end %>
 
   <div class="actions">
-    <%= f.label :uploaded_file, t('.upload_new_file') %>
+    <%= f.label :uploaded_file, t('.Завантажте нове зображення') %>
+    <p></p>
     <%= f.file_field :uploaded_file, multiple: true, name: 'upload[uploaded_file]' %><br>
     <%= f.submit %>
   </div>

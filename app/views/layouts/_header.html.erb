@@ -1,27 +1,21 @@
-
   <header> 
     <%= render 'layouts/user' %>
       </div>
-      <div class="navbar navbar-inverse navbar-inner">
-        <div class="containerz">
-          
-          
-          <nav>
-            <ul class="nav pull-right">
-
-              <li><%= link_to "Головна сторінка", root_path %></li>
-              <li><%= link_to "Візитна картка", visit_path %></li>
-              <li><%= link_to "Методичний банк", mbank_path %></li>
-              <li><%= link_to "Мультимедійні розробки", multrp_path %></li>
-              <li><%= link_to "Гурткова робота", gwork_path %></li>
-              <li><%= link_to "Шкільна організація", school_path %></li>
+      <div class="head-img">
+      <h1> Часовоярська СЗШІ №8 </h1>
+      <h3>Донецької обласної ради</h3>
+      </div>
+      <div class="navbar navbar-inverse navbar-inner" id="mainmenu2">
+      
+          <ul class="nav">
+              
               <li><%= link_to "Масові заходи", mass_path %></li>
               <li><%= link_to "Новини", news_path %></li>
               <li><%= link_to "Гостьова книга", guest_path %></li>
               <li><%= link_to "Соціально-психологічна сторінка", spsih_path %></li>
-
+              <li><%= link_to "Галерея", uploads_path %></li>
+              <li><%= link_to "Шкільна організація", school_path %></li>
             </ul>
-          </nav>
-        </div>
-      </div>
+          </div>
+      
     </header>

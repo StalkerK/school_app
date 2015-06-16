@@ -7,9 +7,10 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
     <%= csrf_meta_tags %>
+    
     <%= render 'layouts/shim' %>
-    </head>
-    <script type="text/javascript">$(document).ready(function() {
+    
+      <script type="text/javascript">$(document).ready(function() {
     if ($('textarea').length > 0) {
         var data = $('textarea');
         $.each(data, function(i) {
@@ -17,10 +18,14 @@
         });
     }
 });</script>
+
+    </head>
+  
   <body>
 
+
 <%= render 'layouts/header' %>
-       
+
       <%= yield %>
 
 <%= render 'layouts/footer' %>

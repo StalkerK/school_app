@@ -18,4 +18,6 @@
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
 //= require ckeditor/init
+//= require galleria-1.4.2.min
+//= require galleria.classic.min 
 //= require_tree .

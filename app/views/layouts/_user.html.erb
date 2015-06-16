@@ -1,17 +1,28 @@
  <article id="userlogin">
- 	<div class="title">
- <h3> Часовоярська СЗШІ №8 Донецької обласної ради </h3>
-   </div>
- <div class="login">
-   <% if current_user %>
-  <%= link_to "Hello, #{current_user.email}", edit_user_registration_path %>
+ 	<div class="navbar navbar-inverse navbar-inner">
+      
+        
+            <ul class="nav" id="mainmenu">
+
+              <li><%= link_to "Головна сторінка", root_path %></li>
+              <li><%= link_to "Візитна картка", visit_path %></li>
+              <li><%= link_to "Методичний банк", mbank_path %></li>
+              <li><%= link_to "Мультимедійні розробки", multrp_path %></li>
+              <li><%= link_to "Гурткова робота", gwork_path %></li>
+              
+               </ul>
+         
+       </div>
+  <div class="login">
+  	<% if current_user %>
+  <%= link_to "#{current_user.email}", edit_user_registration_path %>
    <%= link_to "Вихід", destroy_user_session_path, :method => :delete %>
 <% else %>
   <%= link_to "Вхід", "#sign_in", "data-toggle" => "modal", :class => 'btn btn-small' %>
- 
+ </div>
 
     <%= render 'shared/sign_in' %>
- 
+    
   </article>
 
   

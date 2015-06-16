@@ -1,10 +1,18 @@
 GIT
-  remote: git://github.com/galetahub/ckeditor.git
-  revision: 16dc5d233e48b5d9a52c8d60923c6a86f366f8cd
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: 289251c32cd3db9c908bac75678f58f95258ea97
   specs:
-    ckeditor (4.1.1)
+    ckeditor (4.1.2)
       cocaine
       orm_adapter (~> 0.5.0)
+
+GIT
+  remote: https://github.com/tristanperalta/galleria-rails.git
+  revision: d5bb8994344b3db7bb4e5d319db3f6302cca9a09
+  specs:
+    galleria-rails (0.0.1)
+      jquery-rails
+      railties (>= 3.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -58,7 +66,7 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     commonjs (0.2.7)
-    devise (3.4.1)
+    devise (3.5.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -148,7 +156,7 @@ GEM
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
     rubyzip (0.9.9)
-    sass (3.4.13)
+    sass (3.4.14)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -208,6 +216,7 @@ DEPENDENCIES
   ckeditor!
   coffee-rails (= 4.0.1)
   devise
+  galleria-rails!
   jbuilder (= 1.0.2)
   jquery-fileupload-rails
   jquery-rails

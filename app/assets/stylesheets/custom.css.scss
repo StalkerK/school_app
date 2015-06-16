@@ -7,38 +7,99 @@ html {
 }
 
 body {
- color: #1647E1;
+  min-width:1150px;
+
  
   
 }
 header{
   position:relative;
-  min-width:1083px;
-  
-  margin-bottom: 1px;
+  min-width:1150px;
+    margin-bottom: 1px;
+
+  .head-img{
+    height:150px;
+    padding-top:30px;
+    text-align: center;
+    color:white;
+    vertical-align: middle;
+    font-family: "Trade Gothic",Verdana,sans-serif;
+    
+  background-image: image-url("header-bg.jpg");
 
 }
-article#userlogin{
-  text-align: center;
-  margin:0;
+}
 
+
+article .login{
+   position: absolute;
+    right: 10px;
+    top: 11px;
+  text-align: center;
+  margin:auto;
+  a{
+    color: #B6B6B6;
+  } 
   .btn{
+    color:black;
     float:right;
   }
-   .title {
-     
-     float:center;
-     text-align: center;
-     
+p .notice{
+  height: 0px;
+  margin:0;
+padding:0;}
+  
+}
 
-   }
-  .login {
-    position:absolute;
-    top:2px;
-    right:10px;
-    
+ #userlogin div.navbar{
+ margin-bottom: 0px;
+ background: #333;
+ border: 0;
+ border-radius: 0;
     
 }
+.nav#mainmenu {
+  width:790px;
+ float:none;
+left:auto;
+right: auto;
+
+ margin:0 auto;
+ a {
+  color:white;
+  text-shadow: 0.0625em 0.0625em 0px #000;
+ }
+ a:hover {
+  transition: 0.5s;
+  color:#B6B6B6;
+ } 
+}
+div#mainmenu2.navbar-inner {
+ max-width: 100em;
+
+ border-top: 0.1875em solid #FFF;
+border-bottom: 0.1875em solid #FFF;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0; 
+  background: none repeat scroll 0% 0% #522D80;
+  a{
+    color: white;
+    line-height: 1.6;
+    font-size: 1.35em;
+  }
+  ul{
+   width:1075px;
+  margin: 0 auto;
+  float: none;
+ 
+    }
+
+   a:hover {
+    transition: 0.5s;
+    color:#522D80;;
+    background: none repeat scroll 0% 0% white;
+   }
 }
 .new_post{
   text-align: center;
@@ -55,17 +116,7 @@ p.alert, p.notice {
     border:0px solid;
     background:none;
 }
-.navbar{
-margin-bottom: 0px;
-}
 
-
-.navbar-inverse .navbar-inner {
-  background-color: #FCFCC8;
-  background-image: none;
-background-repeat: none;
-border-color: #252525;
-   }
 
 
 section {
@@ -84,8 +135,12 @@ textarea {
   margin-bottom: 10px;
 }
 .hero-unit{
- 
+  color: black;
+ background-color: white;
  padding-top:10px;
+  a{color:#522D80;}
+  .btn{color: black;}
+input[type="submit"]{margin: auto;}
 }
 .microposts hr{
    border-color: gray;
@@ -138,10 +193,20 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
+  height: 100px;
+  padding-top: 3.375em;
+margin-top: -1.875em;
+  border-top: 0;
+  bottom: 0px;
+  background: #F66733 none repeat scroll 0% 0%;
+ color: #FFF;
+ hr{
+  width: 550px;
+  height: 0.06em; 
+  border: none; 
+  background-color: #666;
+ }
+
 }
 
 footer a {
@@ -169,3 +234,11 @@ footer ul li {
 .progress {
   height:20px;width:550px;
 }
+
+/*galleria*/
+.preview {
+
+     display: inline-block;
+     padding: 10px 0;
+     margin: 0 10px 10px 0;
+   }
