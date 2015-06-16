@@ -1,11 +1,13 @@
 
-<h2><%= post.title %></h2>
+
 <% if post.photo? %> 
 <%= image_tag post.photo.url(:medium) %>
 <%end%>
  <%= raw post.body %>
-
+<center>
  <% if signed_in? %>
- <%= link_to 'Edit', edit_static_page_post_path(post.static_page, post) %>
- <%= link_to 'Destroy', [post.static_page, post], method: :delete, data: { confirm: 'Are you sure?' } %>
+ <%= link_to image_tag('writing.png', width: '30', height: '20'), edit_static_page_post_path(post.static_page, post), :class => 'btn btn-small' %>
+ <%= link_to image_tag('delete_128x128.png', width: '30', height: '20'), [post.static_page, post],:class => 'btn btn-small', method: :delete, data: { confirm: 'Ви впевнені?' } %>
  <% end %>
+  <hr>
+</center>

@@ -1,22 +1,21 @@
 
-<div class="center hero-unit">
-  <h1>Welcome to the School App</h1>
-
-  <div>
+<div class="hero-unit">
+  
+  
     <% if @page.posts.count > 0 %>
-      <h3>Posts (<%= @page.posts.count %>)</h3>
-      <ol>
+      
+      <ol class="microposts">
+
         <%= render :partial => @page.posts %>
       </ol>
    
      <% else %>
-     На цій сторінці немає повідомлень
+     <center>На цій сторінці немає повідомлень</center>
   <% end %>
   </div>
-</div>
 
-  <div class="container">
-	<% if signed_in? %>
-	<%= render 'posts/form' %>
-	<% end %>
-</div>
+<% if signed_in? %>
+<%= render 'posts/form' %>
+<% end %>
+
+

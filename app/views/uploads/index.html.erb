@@ -1,4 +1,6 @@
-<h1>Галерея</h1>
+<div class="hero-unit">
+  <center>
+<h3>Галерея</h3>
 
   <script src="<%= javascript_path('galleria-1.4.2.min.js') %>" ></script>
   <script src="<%= javascript_path('galleria.classic.min.js') %>" ></script>
@@ -30,5 +32,7 @@
     <% end %>
 <br>
 <% if signed_in? %>
-<%= link_to 'New Upload', new_upload_path %>
+<%= link_to 'New Upload', new_upload_path, :class => 'btn btn-small' %>
 <% end %>
+</center>
+</div>
