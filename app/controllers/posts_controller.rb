@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    
   end
 
   # GET /posts/1
@@ -76,5 +77,5 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body, :photo)
     end
-end
 
+end

@@ -16,6 +16,9 @@ gem 'jquery-fileupload-rails'
 gem 'ckeditor', git: 'https://github.com/galetahub/ckeditor.git'
 gem 'galleria-rails', git: 'https://github.com/tristanperalta/galleria-rails.git'
 gem 'simple_form'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end

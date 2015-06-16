@@ -1,6 +1,14 @@
 class StaticPagesController < ApplicationController
   
   #before_filter :authenticate_user!, except => [:main, :visit]
+  def index
+  @search = Post.search do
+    fulltext params[:search]
+  end
+  @posts = @search.results
+  render 'static_pages/index'
+  end
+
 
   def main
     @page = StaticPage.find_by(name: 'main')
@@ -62,10 +70,5 @@ class StaticPagesController < ApplicationController
     @page = StaticPage.find_by(name: 'spsih')
 
     #@post = @page.posts.build if signed_in?
-  end
-
-
- 
-
- 
+  end 
 end

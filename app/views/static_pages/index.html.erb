@@ -1,0 +1,12 @@
+<h1>Результати пошуку</h1>
+    <div class="search_result"> 
+    <% @posts.each do |post| %>
+        <div class="search_result_title">
+        <%= post.title %>
+        </div>
+        <%= raw post.body %>
+      
+    <% end %>
+     </div>
+    <br>
+<%= link_to 'Back', root_path %>

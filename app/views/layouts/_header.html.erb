@@ -1,5 +1,13 @@
  <%= render 'layouts/user' %>
 
+       <div class="search">
+    <%= form_tag static_pages_path, :method => :get do %>
+      <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
+      </div>
+
   <header  class="navbar navbar-fixed-top navbar-inverse">
 
  
@@ -25,4 +33,6 @@
           </nav>
         </div>
       </div>
+
+
     </header>
