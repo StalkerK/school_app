@@ -1,11 +1,13 @@
+<div class="hero-unit">
+  
 <h3>Результати пошуку</h3>
-    <div class="search_result"> 
+   
+    <div class="microposts"> 
     <% @posts.each do |post| %>
-        <div class="search_result_title">
-        <%= post.title %>
-        </div>
-        <%= raw post.body %>
-      
+       
+       <%= raw post.body %>
+       <hr>
     <% end %>
-<%= link_to 'Назад', root_path %>
+<%= link_to 'Головна сторінка', root_path %>
+</div>
 </div>

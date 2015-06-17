@@ -14,7 +14,6 @@ class Post < ActiveRecord::Base
 
 	searchable do
     text :body
-    text :title
     
     end
 

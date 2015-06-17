@@ -14,14 +14,19 @@
          
        </div>
 
+
+
+  <div class="login">
+  
+
     <div class="search">
     <%= form_tag static_pages_path, :method => :get do %>
-      <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
+      
+      <%= text_field_tag :search, params[:search], id: 'search_field' %>
+      <%= image_submit_tag("search.gif", id: 'search_button', alt: 'Find')%>
     <% end %>
     </div>
-  <div class="login">
+
   	<% if current_user %>
   <%= link_to "#{current_user.email}", edit_user_registration_path %>
    <%= link_to "Вихід", destroy_user_session_path, :method => :delete %>
