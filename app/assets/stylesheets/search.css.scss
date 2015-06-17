@@ -1,0 +1,19 @@
+.search {
+position: relative;
+float: left;
+margin-right: 5px;
+}
+
+#search_field {
+  vertical-align: middle;
+  margin-bottom: 12px;
+ height: 15px;
+ width: 150px;
+}
+
+input#search_button {
+position: absolute;
+right: 1px;
+vertical-align: middle;
+margin-left: -10px;
+}

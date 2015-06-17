@@ -9,7 +9,12 @@
               <li><%= link_to "Методичний банк", mbank_path %></li>
               <li><%= link_to "Мультимедійні розробки", multrp_path %></li>
               <li><%= link_to "Гурткова робота", gwork_path %></li>
-              
+              <li><div class="search">
+                  <%= form_tag static_pages_path, :method => :get do %>
+                  <%= text_field_tag :search, params[:search], id: 'search_field' %>
+                  <%= image_submit_tag("search.gif", id: 'search_button', alt: 'Find')%>
+                  <% end %>
+              </div></li>
                </ul>
          
        </div>
@@ -17,17 +22,7 @@
 
 
   <div class="login">
-  
-
-    <div class="search">
-    <%= form_tag static_pages_path, :method => :get do %>
-      
-      <%= text_field_tag :search, params[:search], id: 'search_field' %>
-      <%= image_submit_tag("search.gif", id: 'search_button', alt: 'Find')%>
-    <% end %>
-    </div>
-
-  	<% if current_user %>
+    <% if current_user %>
   <%= link_to "#{current_user.email}", edit_user_registration_path %>
    <%= link_to "Вихід", destroy_user_session_path, :method => :delete %>
 <% else %>
