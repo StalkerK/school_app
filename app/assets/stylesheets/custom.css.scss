@@ -8,10 +8,9 @@ html {
 
 body {
   min-width:1150px;
-h3 {
 
-  text-align: center;
-}
+ 
+  
 }
 header{
   position:relative;
@@ -33,19 +32,23 @@ header{
 
 
 article .login{
-   position: relative;
-   float: right;
+   position: absolute;
+   width: 200px;
+   height: 40px;
     right: 10px;
-    top: 11px;
+    top: 0px;
   text-align: center;
+  
   margin:auto;
   a{
+    display: inline-block;
+    padding: 10px 0;
     color: #B6B6B6;
   } 
   .btn{
-    position: absolute;
-    top:3px;
-    right: 3px;
+    margin-top: 7px;
+    padding: 2px 10px;
+    vertical-align: middle;
     color:black;
     float:right;
   }
@@ -64,12 +67,12 @@ padding:0;}
     
 }
 .nav#mainmenu {
-  width:790px;
+  
  float:left;
-left:auto;
-right: auto;
+left:0px;
 
- margin:0 auto;
+
+ 
  a {
   color:white;
   text-shadow: 0.0625em 0.0625em 0px #000;
@@ -79,27 +82,6 @@ right: auto;
   color:#B6B6B6;
  } 
 }
-
-.search {
-position: relative;
-float: left;
-margin-right: 5px;
-}
-
-#search_field {
-  vertical-align: middle;
-  margin-bottom: 12px;
- height: 15px;
- width: 150px;
-}
-
-input#search_button {
-position: absolute;
-right: 1px;
-vertical-align: middle;
-margin-left: -10px;
-}
-
 div#mainmenu2.navbar-inner {
  max-width: 100em;
 
