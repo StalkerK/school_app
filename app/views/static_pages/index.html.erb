@@ -1,4 +1,4 @@
-<h1>Результати пошуку</h1>
+<h3>Результати пошуку</h3>
     <div class="search_result"> 
     <% @posts.each do |post| %>
         <div class="search_result_title">
@@ -7,6 +7,5 @@
         <%= raw post.body %>
       
     <% end %>
-     </div>
-    <br>
-<%= link_to 'Back', root_path %>
+<%= link_to 'Назад', root_path %>
+</div>

@@ -60,7 +60,7 @@ padding:0;}
 }
 .nav#mainmenu {
   width:790px;
- float:none;
+ float:left;
 left:auto;
 right: auto;
 
@@ -74,6 +74,13 @@ right: auto;
   color:#B6B6B6;
  } 
 }
+
+.search {
+position:absolute;
+left:780px;
+top:5px; 
+}
+
 div#mainmenu2.navbar-inner {
  max-width: 100em;
 

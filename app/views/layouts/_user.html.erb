@@ -13,6 +13,14 @@
                </ul>
          
        </div>
+
+    <div class="search">
+    <%= form_tag static_pages_path, :method => :get do %>
+      <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
+    </div>
   <div class="login">
   	<% if current_user %>
   <%= link_to "#{current_user.email}", edit_user_registration_path %>
