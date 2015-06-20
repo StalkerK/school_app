@@ -34,7 +34,7 @@ class UploadsController < ApplicationController
   def update
     respond_to do |format|
       if @upload.update(upload_params)
-        format.html { redirect_to @upload, notice: 'Upload was successfully updated.' }
+        format.html { redirect_to @upload, notice: 'Завантаження було успішно оновлено' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

@@ -55,7 +55,7 @@ article .login{
 p .notice{
   height: 0px;
   margin:0;
-padding:0;}
+  padding:0;}
   
 }
 
@@ -97,7 +97,7 @@ border-bottom: 0.1875em solid #FFF;
     font-size: 1.35em;
   }
   ul{
-   width:1075px;
+  width:1075px;
   margin: 0 auto;
   float: none;
  
@@ -250,3 +250,14 @@ footer ul li {
      padding: 10px 0;
      margin: 0 10px 10px 0;
    }
+
+/*top_img*/
+.top_img {
+
+  background-image: image-url("fin1.jpg");
+  
+  height: 450px;
+  width: 1289px;
+
+ 
+}

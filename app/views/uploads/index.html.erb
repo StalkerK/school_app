@@ -25,14 +25,14 @@
         <div class="preview">
           <%= image_tag(upload.uploaded_file(:thumb), class: 'thumb') %>
           <br>
-          <%= link_to 'Show', upload %>
-          <%= link_to 'Destroy', upload, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to image_tag('writing.png', width: '15', height: '10', title: 'Редагувати'), upload %>
+          <%= link_to image_tag('delete_128x128.png', width: '15', height: '10', title: 'Видалити'), upload, method: :delete, data: { confirm: 'Ви впевнені?' } %>
         </div>
       <% end %>
     <% end %>
 <br>
 <% if signed_in? %>
-<%= link_to 'New Upload', new_upload_path, :class => 'btn btn-small' %>
+<%= link_to image_tag('download.png', width: '30', height: '20', title: 'Завантажити фото'), new_upload_path, :class => 'btn btn-small' %>
 <% end %>
 </center>
 </div>

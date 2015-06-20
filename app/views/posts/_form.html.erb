@@ -1,4 +1,4 @@
-
+<div class="hero-unit">
 <%= form_for([@page, @page.posts.build], :html => { :multipart => true }) do |f| %>
 
   <% if @page.errors.any? %>
@@ -23,6 +23,8 @@
   </div>
   <div class="actions">
 
-    <%= f.submit %>
+    <%= f.submit "Cтворити повідомлення" %>
   </div>
 <% end %>
+</div>
+</div>

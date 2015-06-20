@@ -1,3 +1,4 @@
+
 <% provide(:page_title, 'Головна сторінка') %>
 <h1>Listing posts</h1>
 
@@ -19,9 +20,9 @@
         <td><%= post.title %>
         <td><%= raw post.body %>
         <td><%= image_tag post.photo.url (:thumb) %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Показати', post %></td>
+        <td><%= link_to 'Редагувати', edit_post_path(post) %></td>
+        <td><%= link_to 'Видалити', post, method: :delete, data: { confirm: 'Ви впевнені?' } %></td>
       </tr>
     <% end %>
     <% end %>
@@ -30,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Нове повідомлення', new_post_path %>

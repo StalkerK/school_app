@@ -2,11 +2,11 @@ class StaticPagesController < ApplicationController
   
   #before_filter :authenticate_user!, except => [:main, :visit]
   def index
-  @search = Post.search do
-    fulltext params[:search]
-  end
-  @posts = @search.results
-  render 'static_pages/index'
+    @search = Post.search do
+      fulltext params[:search]
+    end
+    @posts = @search.results
+    render 'static_pages/index'
   end
 
 
