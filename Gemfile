@@ -19,7 +19,8 @@ gem 'simple_form'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
-gem 'sass', '3.2.13'
+gem "sass", "~> 3.2.5"
+gem 'sass-rails'
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
@@ -29,7 +30,7 @@ group :test do
   gem 'capybara', '2.1.0'
 end
 
-gem 'sass-rails', '4.0.1'
+
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 gem "jquery-rails"
