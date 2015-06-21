@@ -19,6 +19,7 @@ gem 'simple_form'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
+gem 'sass', '3.2.13'
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
