@@ -22,7 +22,7 @@ gem 'progress_bar'
 gem 'sass', '3.2.13'
 gem 'formtastic-bootstrap', "2.1.3"
 group :development, :test do
-  gem 'rspec-rails', '2.13.1'
+	gem 'rspec-rails', '2.13.1'
 end
 
 group :test do
@@ -43,4 +43,5 @@ end
 
 group :production do
   gem 'rails_12factor', '0.0.2'
+  gem 'pg', '0.15.1'
 end
