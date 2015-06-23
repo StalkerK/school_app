@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/rails/sass-rails.git
+  revision: 8e68c5f24ed6487277e9df531ec57b375ad1bea2
+  specs:
+    sass-rails (5.0.3)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (>= 1.1, < 3)
+
+GIT
   remote: https://github.com/galetahub/ckeditor.git
   revision: 289251c32cd3db9c908bac75678f58f95258ea97
   specs:
@@ -42,9 +53,13 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    autoprefixer-rails (5.2.1)
+      execjs
+      json
     bcrypt (3.1.10)
-    bootstrap-sass (2.3.2.0)
-      sass (~> 3.2)
+    bootstrap-sass (3.3.5)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -165,10 +180,6 @@ GEM
       rspec-mocks (~> 2.13.0)
     rubyzip (0.9.9)
     sass (3.4.14)
-    sass-rails (4.0.1)
-      railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0)
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
@@ -227,7 +238,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (= 2.3.2.0)
+  autoprefixer-rails
+  bootstrap-sass (~> 3.3.1)
   capybara (= 2.1.0)
   ckeditor!
   coffee-rails (= 4.0.1)
@@ -244,7 +256,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_12factor (= 0.0.2)
   rspec-rails (= 2.13.1)
-  sass-rails (= 4.0.1)
+  sass-rails!
   sdoc (= 0.3.20)
   selenium-webdriver (= 2.35.1)
   simple_form
@@ -255,3 +267,6 @@ DEPENDENCIES
   turbolinks (= 1.1.1)
   twitter-bootstrap-rails
   uglifier (= 2.1.1)
+
+BUNDLED WITH
+   1.10.4

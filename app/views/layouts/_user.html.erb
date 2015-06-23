@@ -18,10 +18,10 @@
 
   <div class="login">
     <div class="search">
-                  
+                
                   <%= form_tag static_pages_path, :method => :get do %>
                   <%= text_field_tag :search, params[:search], id: 'search_field', placeholder: 'Cлово для пошуку...' %>
-                  <%= image_submit_tag("search.gif", id: 'search_button', alt: 'Find')%>
+                  <%= image_submit_tag("search.gif", id: 'search_button')%>
                   <% end %>
               </div>
     <% if current_user %>
