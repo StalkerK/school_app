@@ -20,6 +20,7 @@ gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
 gem 'sass', '3.2.13'
+gem 'formtastic-bootstrap', "2.1.3"
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
