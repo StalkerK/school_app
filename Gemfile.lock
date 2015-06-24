@@ -1,4 +1,16 @@
 GIT
+  remote: git://github.com/heroku/rails3_serve_static_assets.git
+  revision: 84910ceb4ca2851d650e66d3b22f5008acf253f8
+  specs:
+    rails3_serve_static_assets (0.0.1)
+
+GIT
+  remote: git://github.com/heroku/rails_log_stdout.git
+  revision: f9a92758f2d5dca5a88bf899a83256302f16ab6c
+  specs:
+    rails_log_stdout (0.0.1)
+
+GIT
   remote: https://github.com/galetahub/ckeditor.git
   revision: 289251c32cd3db9c908bac75678f58f95258ea97
   specs:
@@ -244,7 +256,9 @@ DEPENDENCIES
   pg (= 0.15.1)
   progress_bar
   rails (= 4.0.2)
+  rails3_serve_static_assets!
   rails_12factor (= 0.0.2)
+  rails_log_stdout!
   rspec-rails (= 2.13.1)
   sass-rails (= 4.0.1)
   sdoc (= 0.3.20)
