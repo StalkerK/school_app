@@ -9,7 +9,9 @@
 /log/*.log
 /tmp
 /releases
+releases/
 /shared
+shared/
 # Игнорирование прочих ненужных файлов.
 database.yml
 doc/
