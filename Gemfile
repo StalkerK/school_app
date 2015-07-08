@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
+
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
@@ -39,9 +40,12 @@ group :doc do
 end
 
 group :production do
+  gem 'capistrano', '~> 3.1.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-rvm', github: "capistrano/rvm" 
   gem 'rails_12factor', '0.0.2'
   gem 'pg', '0.15.1'
-  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+  gem "net-ssh", "~> 2.7.0"   
 end
 ruby '2.0.0'

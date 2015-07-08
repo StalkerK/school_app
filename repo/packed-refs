@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled 
+1df97f5e152f06e0e2f79b6b9fda06f4668d54e5 refs/heads/add_galleria
+dda2bc6c81c4475c495cb31f7627adbd8e756019 refs/heads/add_multi_attach
+e07edbf3329167489380d64557b6c04b995deec0 refs/heads/add_paperclip
+abfb424ef1160f111512aec295aa328040bd20cf refs/heads/css-1
+2f6a3d1b02f9bc2f40b23e951124a4c4a0f8ce10 refs/heads/editor
+971f3607ea6aa394e843b967c2bbd2361c3eac28 refs/heads/master
+e3455c5fe0361653d78fef07098faee4c74b07e8 refs/heads/modify-login
+2f5573d7a9d63ac3781525da47db83614a4acd7d refs/heads/signin
