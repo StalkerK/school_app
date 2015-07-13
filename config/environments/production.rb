@@ -21,14 +21,14 @@ SchoolApp::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
-  
+
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
-  
+
   # Generate digests for assets URLs.
   config.assets.digest = true
 
@@ -77,20 +77,4 @@ SchoolApp::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
-  config.assets.precompile << Proc.new { |path|
-  if path =~ /\.(css|js)\z/
-    full_path = Rails.application.assets.resolve(path).to_path
-    app_assets_path = Rails.root.join('app', 'assets').to_path
-    if full_path.starts_with? app_assets_path
-      puts "including asset: " + full_path
-      true
-    else
-      puts "excluding asset: " + full_path
-      false
-    end
-  else
-    false
-  end
-}
 end
