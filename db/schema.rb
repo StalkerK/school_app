@@ -53,10 +53,6 @@ ActiveRecord::Schema.define(version: 20150521204327) do
   create_table "uploads", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "uploaded_file_file_name"
-    t.string   "uploaded_file_content_type"
-    t.integer  "uploaded_file_file_size"
-    t.datetime "uploaded_file_updated_at"
   end
 
   create_table "users", force: true do |t|
