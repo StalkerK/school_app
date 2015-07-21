@@ -19,5 +19,8 @@
 //= require jquery-fileupload/vendor/tmpl
 //= require ckeditor/init
 //= require galleria-1.4.2.min
-//= require galleria.classic.min 
+//= require galleria.classic.min
+//= require galleria_setup
+//= require welcome.js.coffee
+//= require uploads.js.coffee
 //= require_tree .

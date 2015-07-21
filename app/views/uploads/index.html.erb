@@ -15,7 +15,9 @@
 
       <script>
         Galleria.loadTheme("<%= javascript_path('galleria.classic.min.js') %>");
+        if ($("#galleria").length == 1) {
         Galleria.run(".galleria", { height: parseInt($('.gallery').css('height')), wait: true });
+      }
       </script>
 
          <br>
