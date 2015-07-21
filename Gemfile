@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
-gem 'non-stupid-digest-assets', '~> 1.0.4'
+
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'pg', '0.15.1'
-gem 'therubyracer', platforms: :ruby
+
 gem "less-rails"
 gem 'twitter-bootstrap-rails', branch: 'bootstrap3'
 gem 'devise'
@@ -20,6 +20,7 @@ gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
 group :development, :test do
+	gem 'therubyracer', platforms: :ruby
   gem 'rspec-rails', '2.13.1'
 end
 
@@ -40,5 +41,5 @@ group :doc do
 end
 
 group :production do
-  gem 'rails_12factor', '0.0.2'
+  #gem 'rails_12factor', '0.0.2'
 end

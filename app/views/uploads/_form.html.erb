@@ -17,7 +17,7 @@
     <%= f.label :uploaded_file, t('.Завантажте нове зображення') %>
     <p></p>
     <%= f.file_field :uploaded_file, multiple: true, name: 'upload[uploaded_file]' %><br>
-    <%= f.submit "Завантажити" %>
+    <%= f.submit "Завантажити"%>
     <%flash.now[:error] = 'Invalid email/password combination'%>
   </div>
 <% end %>

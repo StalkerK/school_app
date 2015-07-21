@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require welcome
 //= require turbolinks
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
@@ -21,3 +22,4 @@
 //= require galleria-1.4.2.min
 //= require galleria.classic.min 
 //= require_tree .
+
