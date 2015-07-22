@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
+
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
@@ -41,4 +42,5 @@ end
 group :production do
   gem 'pg', '0.15.1'
 end
+
 ruby '2.0.0'

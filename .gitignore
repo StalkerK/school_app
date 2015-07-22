@@ -8,7 +8,12 @@
 # Игнорирование всех логов и временных файлов.
 /log/*.log
 /tmp
-
+/releases
+releases/
+/shared
+shared/
+/public
+public/
 # Игнорирование прочих ненужных файлов.
 database.yml
 doc/

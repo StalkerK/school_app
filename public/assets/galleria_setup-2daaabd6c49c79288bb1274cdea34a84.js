@@ -1,1 +1,0 @@
-Galleria.loadTheme("javascripts/galleria.classic.min.js"),Galleria.configure({debug:!1,transition:"fade"});
