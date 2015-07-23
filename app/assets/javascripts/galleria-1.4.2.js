@@ -5787,7 +5787,7 @@ Galleria.loadTheme = function( src, options ) {
                 if ( !loaded ) {
                     Galleria.raise( "Galleria had problems loading theme at " + src + ". Please check theme path or load manually.", true );
                 }
-            }, 20000);
+            }, 5000000);
         }
     });
 

@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
    
   end
 
-
+ 
   def main
     @page = StaticPage.find_by(name: 'main')
     #@posts = @page.posts.paginate(page: params[:page])

@@ -23,12 +23,15 @@
   
   <body>
 
-
+ 
 <%= render 'layouts/header' %>
+
 
       <%= yield %>
 
+<% cache('layouts/footer') do %> 
 <%= render 'layouts/footer' %>
-    
+ <% end %>   
+
    </body>
 </html>
