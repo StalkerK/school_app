@@ -1,5 +1,6 @@
 
 <% provide(:page_title, 'Головна сторінка') %>
+<%cache do%>
 <div class="top_img">
 	<div class="head-txt">Душа исцеляется рядом с детьми.<br>
      Дети — это наше настоящее и будущее…
@@ -7,3 +8,4 @@
 <%=image_tag("fin1.jpg")%>
 
 </div>
+<%end%>
